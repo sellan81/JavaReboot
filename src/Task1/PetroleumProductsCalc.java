@@ -3,6 +3,7 @@ package Task1;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+//Класс учета ГСМ на предпрятии
 public class PetroleumProductsCalc {
     public static  String[] inputDataArray = {"C100_1-100", "C200_1-120-1200", "C300_1-120-30", "C400_1-80-20", "C100_2-50", "C200_2-40-1000", "C300_2-200-45", "C400_2-10-20", "C100_3-10", "C200_3-170-1100", "C300_3-150-29", "C400_3-100-28", "C100_1-300", "C200_1-100-750", "C300_1-32-15"};
     public static final String delim = "_";
@@ -11,16 +12,12 @@ public class PetroleumProductsCalc {
     public static void main(String[] args) {
         prepareArr();
 
-calcFullAmount();
         System.out.println("Справка - /? , для выхода - exit");
         Scanner scanner = new Scanner(System.in);
         String inputStr = "null";
 
         while ( !inputStr.equals("EXIT") ) {
             inputStr = scanner.nextLine().toUpperCase();
-           // inputStr = inputStr.toUpperCase();
-           // System.out.println(inputStr);
-           // System.out.println(inputStr != "EXIT");
             switch ( inputStr ) {
                 case ("/?"):
                     System.out.println("full amount - рассчитать общую стоимость расходов на ГСМ");
@@ -146,6 +143,8 @@ calcFullAmount();
         sortArr();
     }
 
+
+    //Класс данных об автомобилях
     private static class DataCars {
         private String typeOfCar;
         private int namberCar;
