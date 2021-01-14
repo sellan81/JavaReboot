@@ -11,16 +11,12 @@ public class PetroleumProductsCalc {
     public static void main(String[] args) {
         prepareArr();
 
-calcFullAmount();
         System.out.println("Справка - /? , для выхода - exit");
         Scanner scanner = new Scanner(System.in);
         String inputStr = "null";
 
         while ( !inputStr.equals("EXIT") ) {
             inputStr = scanner.nextLine().toUpperCase();
-           // inputStr = inputStr.toUpperCase();
-           // System.out.println(inputStr);
-           // System.out.println(inputStr != "EXIT");
             switch ( inputStr ) {
                 case ("/?"):
                     System.out.println("full amount - рассчитать общую стоимость расходов на ГСМ");
